@@ -4,6 +4,10 @@ struct Deck {
     cards: Vec<String>,
 }
 
+struct Card {
+    
+}
+
 fn main() {
 
     let deck = Deck { cards: vec![] };
