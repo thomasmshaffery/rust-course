@@ -4,11 +4,11 @@ struct Deck {
     cards: Vec<String>,
 }
 
-struct Card {
-    
-}
-
 fn main() {
+    let suits = vec!["Hearts", "Spades", "Diamonds", "Clubs"];
+    let values = vec!["Ace", "Two", "Three"];
+
+
 
     let deck = Deck { cards: vec![] };
 
