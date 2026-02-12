@@ -4,7 +4,9 @@ struct Deck {
     cards: Vec<String>,
 }
 
-fn main() {
+impl Deck {
+    fn new() -> Self {
+    
     let suits = ["Hearts", "Spades", "Diamonds", "Clubs"];
     let values = ["Ace", "Two", "Three"];
 
@@ -18,6 +20,12 @@ fn main() {
     }
 
     let deck = Deck { cards };
+    return deck;
+    }
+}
 
+fn main() {
+
+    let deck = Deck::new();
     println!("Here is your deck {:#?}", deck);
 }
