@@ -22,6 +22,10 @@ impl Deck {
     let deck = Deck { cards };
     return deck;
     }
+
+    fn shuffle(&self) {
+
+    }
 }
 
 fn main() {
