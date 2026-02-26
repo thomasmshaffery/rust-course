@@ -31,5 +31,7 @@ impl Deck {
 fn main() {
 
     let deck = Deck::new();
+
+    deck.shuffle();
     println!("Here is your deck {:#?}", deck);
 }
