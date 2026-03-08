@@ -1,3 +1,4 @@
+use rand::{rng, seq::SliceRandom};
 #[derive(Debug)]
 
 struct Deck {
