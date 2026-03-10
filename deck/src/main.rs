@@ -1,3 +1,6 @@
+use core::num;
+use std::i32;
+
 use rand::{rng, seq::SliceRandom};
 #[derive(Debug)]
 
@@ -27,6 +30,13 @@ impl Deck {
         let mut rng = rng();
         self.cards.shuffle(&mut rng);
     }
+
+    fn deal (&mut self, num_cards: usize) -> Vec<String> {
+        
+        self.cards.split_off(
+            self.cards.len() - num_cards
+        )
+    }
 }
 
 fn main() {
@@ -34,5 +44,6 @@ fn main() {
     let mut deck = Deck::new();
 
     deck.shuffle();
-    println!("Here is your deck {:#?}", deck);
+    //println!("Here is your deck {:#?}", deck);
+    println!("{:#?}", deck.deal(3));
 }
