@@ -9,7 +9,7 @@ impl Deck {
     fn new() -> Self {
     
     let suits = ["Hearts", "Spades", "Diamonds", "Clubs"];
-    let values = ["Ace", "Two", "Three"];
+    let values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"];
 
     let mut cards = vec![];
 
@@ -23,14 +23,15 @@ impl Deck {
     Deck { cards }
     }
 
-    fn shuffle(&self) {
-
+    fn shuffle(&mut self) {
+        let mut rng = rng();
+        self.cards.shuffle(&mut rng);
     }
 }
 
 fn main() {
 
-    let deck = Deck::new();
+    let mut deck = Deck::new();
 
     deck.shuffle();
     println!("Here is your deck {:#?}", deck);
