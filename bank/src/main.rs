@@ -22,9 +22,13 @@ impl Account {
     }
 }
 
+fn print_account(account: Account) {
+    println!("{:#?}", account)
+}
+
 fn main() {
     let mut bank = Bank::new();
     let mut acc = Account::new(666, String::from("Tom"));
-    bank.accounts.push(acc);
-    println!("{:#?}", bank)
+    
+    print_account(acc);
 }
