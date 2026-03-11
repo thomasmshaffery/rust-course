@@ -23,8 +23,8 @@ impl Account {
 }
 
 fn main() {
-    let bank = Bank::new();
-    let acc = Account::new(666, String::from("Tom"));
-    bank.accounts.add(acc);
+    let mut bank = Bank::new();
+    let mut acc = Account::new(666, String::from("Tom"));
+    bank.accounts.push(acc);
     println!("{:#?}", bank)
 }
