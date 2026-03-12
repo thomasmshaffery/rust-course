@@ -29,6 +29,9 @@ fn print_account(account: Account) {
 fn main() {
     let mut bank = Bank::new();
     let mut acc = Account::new(666, String::from("Tom"));
-    
-    print_account(acc);
+    bank.accounts.push(acc);
+
+    for account in bank.accounts {
+        print_account(account);
+    };
 }
